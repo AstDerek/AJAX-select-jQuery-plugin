@@ -45,7 +45,7 @@ if ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH
             'ExtJS',
             'Raphael',
             'RightJS',
-        );
+        ),
         
         'CSS grid systems' => array(
             '1kb',
@@ -53,7 +53,7 @@ if ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH
             'Blueprint',
             'Golden grid',
             'Simple grid',
-        );
+        ),
         
         'No more options' => false,
     );
@@ -66,11 +66,14 @@ if ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-<script type="text/javascript" src="ajaxSelect-0.2.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.ajaxselect.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-    $('select').ajaxSelect({url:document.location.href}).trigger('change');
+    $('select').ajaxselect({
+        url: document.location.href
+    })
+    .trigger('change');
 });
 </script>
 <style type="text/css">
